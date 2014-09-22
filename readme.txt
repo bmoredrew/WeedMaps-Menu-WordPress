@@ -1,6 +1,5 @@
 === WeedMaps Menu for WordPress ===
-Contributors: baltimoredrew
-Donate link: 
+Contributors: bmoredrew
 Tags: weedmaps, menu
 Requires at least: 3.0
 Tested up to: 4.0
