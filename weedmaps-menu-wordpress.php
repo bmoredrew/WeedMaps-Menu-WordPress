@@ -33,7 +33,8 @@ class BD_WeedMaps_Embed {
     public function wm_shortcode( $atts = NULL, $content)  { 
         return "
                 <script type='text/javascript'>var wmenu_id = $content;</script>
-                <script type='text/javascript' src='http://legalmarijuanadispensary.com/components/com_weedmenu/weedmenu-widget.js'></script>
+                <script type='text/javascript'>var wmenu_type = 'dispensaries';</script>
+                <script type='text/javascript' src='https://weedmaps.com/components/com_weedmenu/weedmenu-widget.js'></script>
                 ";
     }
 
