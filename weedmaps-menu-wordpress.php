@@ -3,7 +3,7 @@
 Plugin Name: WeedMaps Menu for WordPress
 Plugin URI: https://github.com/bmoredrew/WeedMaps-Menu-WordPress
 Description: Easily embed a WeedMaps Menu into a page using a shortcode
-Version: 0.1
+Version: 1.2.0
 Author: Drew Poland
 Author URI: http://baltimoredrew.com/
 License: GPL2
