@@ -3,7 +3,7 @@
 Plugin Name: WeedMaps Menu for WordPress
 Plugin URI: https://github.com/bmoredrew/WeedMaps-Menu-WordPress
 Description: Easily embed a WeedMaps Menu into a page using a shortcode
-Version: 1.2.0
+Version: 1.3.0
 Author: Drew Poland
 Author URI: http://baltimoredrew.com/
 License: GPL2
@@ -30,11 +30,22 @@ class BD_WeedMaps_Embed {
     /**
      * Shortcode [weedmaps_menu]
      */
-    public function wm_shortcode( $atts = NULL, $content)  { 
-        return "
-                <script type='text/javascript'>var wmenu_id = $content;</script>
-                <script type='text/javascript'>var wmenu_type = 'dispensaries';</script>
-                <script type='text/javascript' src='https://weedmaps.com/components/com_weedmenu/weedmenu-widget.js'></script>
+    public function wm_shortcode( $atts,$content)  { 
+            
+        $atts = shortcode_atts( array(
+            'type' => 'dispensaries'
+        ), $atts, 'weedmaps_menu' );
+    
+        return "<style type='text/css'>
+                #weedmenuPane .menu_item{min-height:90px;}
+                #weedmenuPane .menu_item, #weedmenuPane h2{clear:both !important; height:auto !important}
+                </style>
+                
+                <script type='text/javascript'>
+                var wmenu_id = '". $content."';
+                var wmenu_type = '".$atts['type']."';
+                </script>
+                <script type='text/javascript' src='".plugins_url( 'js/weedmaps.js', __FILE__ )."'></script>
                 ";
     }
 
